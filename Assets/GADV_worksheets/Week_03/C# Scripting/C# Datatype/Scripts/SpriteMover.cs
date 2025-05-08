@@ -16,7 +16,7 @@ namespace GADVDataTypes
         void Update()
         {
             // Implicit conversion (int → float)
-            float totalMovement = moveSpeed * timeElapsed;
+            float totalMovement = moveSpeed + timeElapsed;
             transform.position = new Vector3(totalMovement, 0, 0);
 
             //int roundedSpeed = int.Parse(totalMovement);
