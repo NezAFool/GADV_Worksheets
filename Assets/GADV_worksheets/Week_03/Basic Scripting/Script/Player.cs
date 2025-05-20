@@ -26,7 +26,7 @@ public class Player
     {
         if ((health -= damage) < 0)
         {
-            health = 0;
+            health = minHealth;
         }
         else
         {
@@ -36,9 +36,15 @@ public class Player
     }
     public void getHealth(int Health)
     {
-        if ((health +=Health)< maxHealth)
+        Debug.Log($"{health}");
+        if ((this.health +=Health)> maxHealth)
         {
-            health += Health;
+            this.health = maxHealth;
+            Debug.Log("Health Full");
+        }
+        else
+        {
+            Debug.Log($"Healed {Health} health, Current Health:{health}");
         }
         
     }

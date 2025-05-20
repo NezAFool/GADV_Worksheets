@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Main : MonoBehaviour
 {
@@ -11,9 +12,14 @@ public class Main : MonoBehaviour
     {
         Player player = new Player(10);
         player.TakeDamage(3);
+        player.getHealth(2);
+        player.TakeDamage(1);
 
         Projectile projectile = new Projectile(0f);
         projectile.Fire();
+        ScoreTracker score1 = new ScoreTracker(10);
+        
+
     }
 
     // Update is called once per frame
