@@ -18,6 +18,10 @@ public class Main : MonoBehaviour
         Projectile projectile = new Projectile(0f);
         projectile.Fire();
         ScoreTracker score1 = new ScoreTracker(10);
+        TreasureChest ancient = new AncientChest();
+        ancient.Unlock();
+        ancient.shake();
+        
         
 
     }
