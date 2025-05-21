@@ -10,6 +10,8 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bool token = true;
+        bool noToken = false;
         Player player = new Player(10);
         player.TakeDamage(3);
         player.getHealth(2);
@@ -19,8 +21,12 @@ public class Main : MonoBehaviour
         projectile.Fire();
         ScoreTracker score1 = new ScoreTracker(10);
         TreasureChest ancient = new AncientChest();
-        ancient.Unlock();
+        TreasureChest magic = new MagicChest();
+        ancient.Unlock(token);
         ancient.shake();
+        magic.Unlock(noToken);
+        magic.shake();
+        Explodable explodable = new Explodable();
         
         
 
