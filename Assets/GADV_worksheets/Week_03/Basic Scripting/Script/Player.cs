@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player 
+public class PlayerExplode 
 {
     // Start is called before the first frame update
     private int health = 0;
     private int maxHealth = 10;
     private int minHealth = 0;
-    public Player(int Health)
+    public PlayerExplode(int Health)
     {
         if (Health > maxHealth)
         {

@@ -12,7 +12,7 @@ public class Main : MonoBehaviour
     {
         bool token = true;
         bool noToken = false;
-        Player player = new Player(10);
+        PlayerExplode player = new PlayerExplode(10);
         player.TakeDamage(3);
         player.getHealth(2);
         player.TakeDamage(1);
