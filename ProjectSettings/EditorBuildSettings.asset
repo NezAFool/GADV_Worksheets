@@ -4,5 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GADV_worksheets/Week_07/Brick Breaker/Brick Breaker/Assets/Scenes/Brick
+      Breaker 2/MainGame.unity
+    guid: 2296de43e4b9ed940a2fae8d924c28eb
+  - enabled: 1
+    path: Assets/GADV_worksheets/Week_07/Brick Breaker/Brick Breaker/Assets/Scenes/Brick
+      Breaker 2/MainGame 1.unity
+    guid: b4fa2e57d7c8f284f85e4e39a14e180c
   m_configObjects: {}
