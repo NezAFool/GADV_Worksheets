@@ -2399,7 +2399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912b69cf14e8e8f4e83e33849dddf4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
+  moveLimit: 1.5
 --- !u!1001 &1240329150
 PrefabInstance:
   m_ObjectHideFlags: 0

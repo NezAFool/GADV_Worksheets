@@ -5,40 +5,31 @@ using UnityEngine;
 
 public class BrickSway : MonoBehaviour
 {
-    
-    public float range = 5f;
-    private bool check = true;
-    private Vector2 direction = new Vector2 (0.2f, 0);
-    // Start is called before the first frame update
+
+    private float moveSpeed = 2f;  // Speed of horizontal movement
+    public float moveLimit = 3f;  // Maximum distance from start pos
+    private Vector3 startPos;
+    public int direction = 1;  // 1 = right, -1 = left
+
+    float initialXPos;
+    float factor = 5f;
+
     void Start()
     {
-        
+        initialXPos = transform.position.x;   
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (check)
-        //{
-        //    transform.localPosition = new Vector2 (1,0);
-        //    range -= 0.5f;
-        //    if (range == -1f)
-        //    {
-        //        check = false;
-        //    }
-        //    Debug.Log($"{range}");
+        //float newX = initialXPos + Mathf.Sin(Time.time) * factor;
+        //transform.position = new Vector3(newX, transform.position.y, transform.position.z);
 
-        //}
-        //else 
-        //{
-        //    transform.localPosition = new Vector2 (-1,0);
-        //    range += 0.5f;
-        //    if (range == 1f) {
-        //        check = true;
-        //    }
-        //    Debug.Log($"{range} other way");
-        //}
-        transform.localPosition = new Vector3(MathF.Sin((1/2)*Time.deltaTime*range), 0);
+        transform.position += new Vector3(direction * moveSpeed * Time.deltaTime, 0, 0);
+        if (Mathf.Abs(transform.position.x - startPos.x) >= moveLimit)
+        {
+            direction *= -1; // Reverse direction
+        }
 
     }
 }
