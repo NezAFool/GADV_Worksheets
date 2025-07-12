@@ -25,9 +25,11 @@ public class CheckCollision : MonoBehaviour
         }
         
     }
-    //Update is called once per frame
-    private void Update()
+    public void OnCollisionExit(Collision collision)
     {
-        
+        if (rb != null) 
+        {
+            mat.material.color = Color.red;
+        }
     }
 }
